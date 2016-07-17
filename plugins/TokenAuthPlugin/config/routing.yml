@@ -1,0 +1,10 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+#
+#user_create:
+#  url:   /register
+#  param: { module: TokenAuthRegister, action: create }
+#  
+user_create:
+  url:   /
+  param: { module: TokenAuthRegister, action: form }

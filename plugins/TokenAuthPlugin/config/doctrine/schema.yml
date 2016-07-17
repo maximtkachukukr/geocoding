@@ -1,0 +1,15 @@
+User:
+    actAs: 
+        Timestampable: ~ 
+    columns:
+      email: { type: string(255), notnull: true, unique: true }
+      auth_token: string(255)  
+      
+History:
+    actAs: 
+        Timestampable: ~
+    columns:
+      user_id: integer(5)
+      message: string(255)  
+    relations:
+        User:  { onDelete: CASCADE, local: user_id, foreign: id }

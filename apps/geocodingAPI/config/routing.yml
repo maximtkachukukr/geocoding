@@ -1,0 +1,30 @@
+history:
+  url:     /history
+  options: { model: history, type: object }
+  param:   { module: history, action: index, sf_format: json }
+  requirements: { sf_method: get }
+  
+history_show:
+  url:     /history/:id.:sf_format
+  options: { model: history, type: object }
+  param:   { module: history, action: getOne, sf_format: json }
+  requirements: { sf_method: get }
+  
+ 
+history_delete:
+  url:     /history/:id.:sf_format
+  options: { model: history, type: object }
+  param:   { module: history, action: deleteOne, sf_format: json }
+  requirements: { sf_method: delete }
+  
+ 
+geocoding:
+  url:     /geocoding
+  param:   { module: geocoding, action: geocoding, sf_format: json }
+  requirements: { sf_method: get }
+ 
+reverse_geocoding:
+  url:     /endpoint
+  param:   { module: geocoding, action: endpoint, sf_format: json }
+  requirements: { sf_method: get }
+ 
